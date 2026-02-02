@@ -1,0 +1,33 @@
+.container {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a 100%);
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #00f7ff33 0%, #0f0f1e00 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(50px);
+    z-index: 1;
+    animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: .5;
+        transform: translate(-50%, -50%) scale(.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
