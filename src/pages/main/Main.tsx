@@ -8,8 +8,7 @@ import './Main.css'
 
 const Main = () => {
     const [active, setActive] = useState<number>(1)
-    console.log(active);
-    
+
     useEffect(() => {
     const interval = setInterval(() => {
       setActive(prev => (prev === 3 ? 1 : prev + 1));

@@ -1,0 +1,26 @@
+.btn {
+    padding: 12px 16px;
+    background: linear-gradient(90deg, #00f7ff, #0066ff);
+    border-radius: 30px;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform .7s ease, opacity .7s ease;
+    transition-delay: .5s;
+}
+
+.active .btn {
+    transform: translateX(0);
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    filter: drop-shadow(0 0 10px #00f7ff4d);
+    background: linear-gradient(90deg, #00f7ff, #0050c9);
+}
