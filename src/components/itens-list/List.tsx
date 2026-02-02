@@ -1,9 +1,10 @@
+import type { activeProps } from "../../types/Props";
 import "./List.css"
 
-const List = () => {
+const List = ({ active }: activeProps) => {
     return (
         <div className="list">
-            <div className="item active">
+            <div className={`item ${active === 1 ? "active" : ""}`}>
                 <div className="product-img">
                     <img src="../../../public/apple-watch.png" alt="Apple Watch" />
                 </div>
@@ -15,7 +16,7 @@ const List = () => {
                     <button className="btn">Saiba Mais</button>
                 </div>
             </div>
-            <div className="item">
+            <div className={`item ${active === 2 ? "active" : ""}`}>
                 <div className="product-img">
                     <img src="../../../public/air-pods.png" alt="Air pods max" />
                 </div>
@@ -27,7 +28,7 @@ const List = () => {
                     <button className="btn">Saiba Mais</button>
                 </div>
             </div>
-            <div className="item">
+            <div className={`item ${active === 3 ? "active" : ""}`}>
                 <div className="product-img">
                     <img src="../../../public/vision-pro.png" alt="Vision pro" />
                 </div>
