@@ -1,3 +1,5 @@
+import './Indicators.css'
+
 const Indicators = () => {
     return (
         <div className="indicators">
